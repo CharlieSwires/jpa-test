@@ -3,12 +3,12 @@ package com.charlie;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 
-public interface TestRepository extends Repository<Test, Long> {
+public interface TestRepository extends CrudRepository<Test, Long> {
 
-    @Query(value = "SELECT t.id, t.name, g.gender FROM test t, gender g JOIN gender ON (t.sex = g.id)",
+    @Query(value = "SELECT distinct( t.id), t.name, g.gender FROM test t, gender g join gender ON (t.sex = g.id)",
             nativeQuery=true
     )
     public List<String[]> listAllInFull();

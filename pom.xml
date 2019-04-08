@@ -3,7 +3,12 @@
   <groupId>com.charlie</groupId>
   <artifactId>jpa-test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+    </parent>
+<!-- 
   <dependencyManagement>
     <dependencies>
         <dependency>
@@ -15,7 +20,7 @@
         </dependency>
     </dependencies>
 </dependencyManagement>
-
+ -->
 <dependencies>
 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
 <dependency>
@@ -33,6 +38,10 @@
 </dependency>
 
  Database (H2) -->
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
@@ -55,10 +64,35 @@
     <groupId>org.springframework.data</groupId>
     <artifactId>spring-data-jpa</artifactId>
 </dependency>
-
-        </dependencies>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+ <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-jdbc</artifactId>
+ </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+</dependencies>
 <build>
+
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <mainClass>ExampleMain</mainClass>
+                </configuration>
+                  <executions>
+                    <execution>
+                      <goals>
+                        <goal>repackage</goal>
+                      </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -66,6 +100,7 @@
                 <configuration>
                     <archive>
                         <manifest>
+                        	<addClasspath>true</addClasspath>
                             <mainClass>com.charlie.ExampleMain</mainClass>
                         </manifest>
                     </archive>
@@ -75,7 +110,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>make-jar-with-dependencies</id>
+                        <id>assemble-all</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>

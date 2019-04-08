@@ -3,6 +3,3 @@ com\charlie\Test.class
 com\charlie\ApplicationContext.class
 com\charlie\TestRepository.class
 com\charlie\App.class
-com\charlie\Gender.class
-com\charlie\PersistenceContext.class
-com\charlie\GenderRepository.class

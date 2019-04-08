@@ -1,34 +1,25 @@
 package com.charlie;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.springframework.context.annotation.Bean;
 
 @Entity
-@Table(name = "test")
-public class Test {
+public class Test{
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
  
-    @Column(name = "name", length = 255)
     private String name;
     
-    @Column(name = "sex")
     private Long sex;
 
-	public Long getId() {
-		return id;
-	}
+    protected Test(){}
 
-	public Test() {
-		super();
+    public Long getId() {
+		return id;
 	}
 
 	public void setId(Long id) {
@@ -50,6 +41,4 @@ public class Test {
 	public void setSex(Long sex) {
 		this.sex = sex;
 	}
-
-
 }

@@ -76,11 +76,17 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         </property>
     </bean>
 
-    <bean id="Test" class="com.charlie.Test"/>
-    <bean id="Gender" class="com.charlie.Gender"/>
-    <bean id="TestRepository" class="com.charlie.TestRepository"/>
-    <bean id="GenderRepository" class="com.charlie.GenderRepository"/>
+    <bean id="App"
+        class="com.charlie.App" />
+    <bean id="ExampleMain"
+        class="com.charlie.ExampleMain" />
+    <bean id="ApplicationContext"
+        class="com.charlie.ApplicationContext" />
+    <bean id="Test"
+        class="com.charlie.Test" />
+    <bean id="TestRepository"
+        class="com.charlie.TestRepository" />
 
   
-    <jpa:repositories base-package="com.charlie"/>
+    <jpa:repositories base-package="com.charlie" entity-manager-factory-ref="com.charlie.entityManagerFactory"/>
 </beans>
