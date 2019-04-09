@@ -11,5 +11,5 @@ public interface Test1Repository extends CrudRepository<Test, Long> {
     @Query(value = "SELECT distinct( t.id), t.name, g.gender FROM test t, gender g join gender ON (t.sex = g.id)",
             nativeQuery=true
     )
-    public List<String[]> listAllInFull();
+    public List<Result> listAllInFull();
 }

@@ -18,7 +18,7 @@ public class MyService {
 	@Autowired
 	Test1Repository repository;
 
-	public List<String[]> run() {
+	public List<Result> run() {
 		return repository.listAllInFull();
 	}
 
