@@ -76,8 +76,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         </property>
     </bean>
 
-    <bean id="App"
-        class="com.charlie.App" />
+    <bean id="MyService"
+        class="com.charlie.MyService" />
+    <bean id="Controller"
+        class="com.charlie.Controller" />
    <bean id="ExampleMain"
         class="com.charlie.ExampleMain" />
     <bean id="Test"
@@ -86,7 +88,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         class="com.charlie.Gender" />
     <bean id="Test1Repository"
         class="com.charlie.Test1Repository" />
-     <bean id="GenderRepository"
-        class="com.charlie.GenderRepository" /> 
+    <bean id="GenderRepository"
+        class="com.charlie.GenderRepository" />
     <jpa:repositories base-package="com.charlie" entity-manager-factory-ref="com.charlie.entityManagerFactory"/>
 </beans>

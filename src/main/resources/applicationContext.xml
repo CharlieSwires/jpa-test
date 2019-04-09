@@ -7,8 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean id="App"
-        class="com.charlie.App" />
+    <bean id="MyService"
+        class="com.charlie.MyService" />
+    <bean id="Controller"
+        class="com.charlie.Controller" />
    <bean id="ExampleMain"
         class="com.charlie.ExampleMain" />
     <bean id="Test"
