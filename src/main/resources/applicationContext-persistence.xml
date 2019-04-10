@@ -9,10 +9,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
     <!-- Configures the database connection. -->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-        <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="jdbcUrl" value="jdbc:h2:mem:datajpa"/>
-        <property name="username" value="sa"/>
-        <property name="password" value=""/>
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="jdbcUrl" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
     </bean>
 
     <!-- Creates the datasource bean. -->
@@ -90,5 +90,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         class="com.charlie.Test1Repository" />
     <bean id="GenderRepository"
         class="com.charlie.GenderRepository" />
+     <bean id="Result"
+        class="com.charlie.Result" />
+     <bean id="Results"
+        class="com.charlie.Results" />
+        
     <jpa:repositories base-package="com.charlie" entity-manager-factory-ref="com.charlie.entityManagerFactory"/>
 </beans>

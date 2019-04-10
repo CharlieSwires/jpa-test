@@ -21,4 +21,9 @@
         class="com.charlie.Test1Repository" />
     <bean id="GenderRepository"
         class="com.charlie.GenderRepository" />
+     <bean id="Result"
+        class="com.charlie.Result" />
+     <bean id="Results"
+        class="com.charlie.Results" />
+
 </beans>

@@ -8,8 +8,8 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface Test1Repository extends CrudRepository<Test, Long> {
 
-    @Query(value = "SELECT distinct( t.id), t.name, g.gender FROM test t, gender g join gender ON (t.sex = g.id)",
+    @Query(value = "SELECT distinct( t.id), t.name, g.gender FROM Test t, Gender g join Gender ON (t.sex = g.id)",
             nativeQuery=true
     )
-    public List<Result> listAllInFull();
+    public List<Object[]> listAllInFull();
 }

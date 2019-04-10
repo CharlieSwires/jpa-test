@@ -20,10 +20,9 @@ public class Controller {
 	@RequestMapping(value = "/getAll")
 	public ResponseEntity<Results> get(){
 		
-		List<Result> rl = serv.run();
-		Results results = new Results();
-		results.setResults(rl);
-		return new ResponseEntity<Results>(results, HttpStatus.OK);
+		Results rl = serv.run();
+		
+		return new ResponseEntity<Results>(rl, HttpStatus.OK);
 		
 	}
 
