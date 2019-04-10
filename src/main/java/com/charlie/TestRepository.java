@@ -17,6 +17,5 @@ public interface TestRepository extends CrudRepository<Test, Long> {
     public List<Object[]> listAllInFull();
     
     public Iterable<Test> findAll();
-    //public Optional<Test> findById(ID id);
 
 }
