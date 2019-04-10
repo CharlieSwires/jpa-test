@@ -84,6 +84,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         class="com.charlie.ExampleMain" />
     <bean id="Test"
         class="com.charlie.Test" />
+     <bean id="Result"
+        class="com.charlie.Result" />
+     <bean id="Results"
+        class="com.charlie.Results" />
     <bean id="Gender"
         class="com.charlie.Gender" />
     <bean id="Test1Repository"

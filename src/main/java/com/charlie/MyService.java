@@ -4,6 +4,12 @@ package com.charlie;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+>>>>>>> 27ac81794b6f04a32c4612bd3f49e36e5fbf19ec
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -19,18 +25,12 @@ import org.springframework.stereotype.Service;
 @EnableJpaRepositories(basePackages = "com.charlie")
 public class MyService {
 
-//	private SessionFactory sessionFactory;
-//
-//	public MyService() {
-//		this.sessionFactory = new Configuration().configure().buildSessionFactory();
-//	}
 
 	@Autowired
 	Test1Repository repository;
 
 	public Results run() {
 		List<Object[]> res = repository.listAllInFull();
-//		List<Object[]> res = listAll();
 		System.out.println("count = "+res.size());
 		List<Result> results = new ArrayList<Result>();
 		for(Object[] item: res) {
@@ -47,11 +47,5 @@ public class MyService {
 		return rs;
 	}
 
-//	public List<Object[]> listAll(){
-//		Session session = this.sessionFactory.openSession();
-//		Query q = session.createSQLQuery("SELECT DISTINCT( t.id), t.name, g.gender FROM TEST t, GENDER g JOIN GENDER ON (t.sex = g.id)");
-//		List<Object[]> result = q.list();
-//		return result;
-//	}
 
 }
