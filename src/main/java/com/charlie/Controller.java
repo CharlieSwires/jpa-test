@@ -19,6 +19,16 @@ public class Controller {
 		Results rl = serv.run();	
 		return new ResponseEntity<Results>(rl, HttpStatus.OK);
 	}
+	@RequestMapping(value = "/getAllGender")
+	public ResponseEntity<Iterable<Gender>> getAllGender(){
+		Iterable<Gender> rl = serv.getAllGender();	
+		return new ResponseEntity<Iterable<Gender>>(rl, HttpStatus.OK);
+	}
+	@RequestMapping(value = "/getAllTest")
+	public ResponseEntity<Iterable<Test>> getAllTest(){
+		Iterable<Test> rl = serv.getAllTest();	
+		return new ResponseEntity<Iterable<Test>>(rl, HttpStatus.OK);
+	}
 
 
 }

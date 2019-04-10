@@ -17,7 +17,9 @@ public class MyService {
 
 
 	@Autowired
-	Test1Repository repository;
+	TestRepository repository;
+	@Autowired
+	GenderRepository genderRepository;
 
 	public Results run() {
 		List<Object[]> res = repository.listAllInFull();
@@ -38,4 +40,10 @@ public class MyService {
 	}
 
 
+	public Iterable<Test> getAllTest(){
+		return repository.findAll();
+	}
+	public Iterable<Gender> getAllGender(){
+		return genderRepository.findAll();
+	}
 }

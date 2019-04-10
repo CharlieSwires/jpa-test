@@ -1,9 +1,9 @@
 com\charlie\ExampleMain.class
 com\charlie\Test.class
 com\charlie\Controller.class
+com\charlie\TestRepository.class
 com\charlie\Results.class
 com\charlie\MyService.class
 com\charlie\Result.class
 com\charlie\Gender.class
-com\charlie\Test1Repository.class
 com\charlie\GenderRepository.class
