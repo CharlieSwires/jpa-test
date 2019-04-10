@@ -1,6 +1,8 @@
 package com.charlie;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -15,5 +17,6 @@ public interface TestRepository extends CrudRepository<Test, Long> {
     public List<Object[]> listAllInFull();
     
     public Iterable<Test> findAll();
+    //public Optional<Test> findById(ID id);
 
 }

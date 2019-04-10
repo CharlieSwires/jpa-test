@@ -3,6 +3,7 @@ package com.charlie;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -45,5 +46,22 @@ public class MyService {
 	}
 	public Iterable<Gender> getAllGender(){
 		return genderRepository.findAll();
+	}
+	
+	public Test getOneTest(Long id){
+		Optional<Test> testOptional = repository.findById(id);
+	
+		if(testOptional.isPresent()){
+			return testOptional.get();
+		};
+		return null;
+	}	
+	public Gender getOneGender(Long id){
+		Optional<Gender> genderOptional = genderRepository.findById(id);
+		
+		if(genderOptional.isPresent()){
+			return genderOptional.get();
+		};
+		return null;
 	}
 }

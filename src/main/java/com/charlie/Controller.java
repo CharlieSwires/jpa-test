@@ -3,6 +3,7 @@ package com.charlie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,13 @@ public class Controller {
 		Iterable<Test> rl = serv.getAllTest();	
 		return new ResponseEntity<Iterable<Test>>(rl, HttpStatus.OK);
 	}
-
+	@RequestMapping(value = "/getOneTest/{i}")
+	public ResponseEntity<Test> getOneTest(@PathVariable("i") Long id){
+		return new ResponseEntity<Test>(serv.getOneTest(id),HttpStatus.OK);
+	}	
+	@RequestMapping(value = "/getOneGender/{i}")
+	public ResponseEntity<Gender> getOneGender(@PathVariable("i") Long id){
+		return new ResponseEntity<Gender>(serv.getOneGender(id),HttpStatus.OK);
+	}
 
 }
