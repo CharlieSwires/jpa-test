@@ -4,16 +4,6 @@ package com.charlie;
 import java.util.ArrayList;
 import java.util.List;
 
-<<<<<<< HEAD
-=======
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
->>>>>>> 27ac81794b6f04a32c4612bd3f49e36e5fbf19ec
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
