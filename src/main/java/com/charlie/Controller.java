@@ -42,13 +42,39 @@ public class Controller {
 
 	@RequestMapping(value = "/post-test")
 	public ResponseEntity<Test> postTest(@RequestBody Test test){
+		test.setId(null);
 		return new ResponseEntity<Test>(serv.save(test),HttpStatus.OK);
 		
 	}
 	
 	@RequestMapping(value = "/post-gender")
 	public ResponseEntity<Gender> postGender(@RequestBody Gender test){
+		test.setId(null);
 		return new ResponseEntity<Gender>(serv.save(test),HttpStatus.OK);
+		
+	}
+	
+	@RequestMapping(value = "/put-test")
+	public ResponseEntity<Test> putTest(@RequestBody Test test){
+		return new ResponseEntity<Test>(serv.saveOrUpdate(test),HttpStatus.OK);
+		
+	}
+	
+	@RequestMapping(value = "/put-gender")
+	public ResponseEntity<Gender> putGender(@RequestBody Gender test){
+		return new ResponseEntity<Gender>(serv.saveOrUpdate(test),HttpStatus.OK);
+		
+	}
+	
+	@RequestMapping(value = "/delete-test/{id}")
+	public ResponseEntity<Boolean> deleteTest(@PathVariable("id") Long id, @RequestBody Test test){
+		return new ResponseEntity<Boolean>(serv.deleteTest(id),HttpStatus.OK);
+		
+	}
+	
+	@RequestMapping(value = "/delete-gender/{id}")
+	public ResponseEntity<Boolean> deleteGender(@PathVariable("id") Long id, @RequestBody Gender test){
+		return new ResponseEntity<Boolean>(serv.deleteGender(id),HttpStatus.OK);
 		
 	}
 }

@@ -73,4 +73,23 @@ public class MyService {
 	public Gender save(Gender test) {
 		return genderRepository.save(test);
 	}
+	
+	public Test saveOrUpdate(Test test) {
+		return repository.save(test);
+	}
+	public Gender saveOrUpdate(Gender test) {
+		return genderRepository.save(test);
+	}
+
+
+	public boolean deleteTest(Long id) {
+		repository.deleteById(id);
+		return true;
+	}
+
+
+	public boolean deleteGender(Long id) {
+		genderRepository.deleteById(id);
+		return true;
+	}
 }
