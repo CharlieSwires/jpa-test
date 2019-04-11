@@ -16,26 +16,26 @@ public class Controller {
 	@Autowired
 	private MyService serv;
 	//@PreAuthorize("hasRole('IT_DEVELOPER')")
-	@RequestMapping(value = "/getAll")
+	@RequestMapping(value = "/get-all")
 	public ResponseEntity<Results> get(){
 		Results rl = serv.run();	
 		return new ResponseEntity<Results>(rl, HttpStatus.OK);
 	}
-	@RequestMapping(value = "/getAllGender")
+	@RequestMapping(value = "/get-all-gender")
 	public ResponseEntity<Iterable<Gender>> getAllGender(){
 		Iterable<Gender> rl = serv.getAllGender();	
 		return new ResponseEntity<Iterable<Gender>>(rl, HttpStatus.OK);
 	}
-	@RequestMapping(value = "/getAllTest")
+	@RequestMapping(value = "/get-all-test")
 	public ResponseEntity<Iterable<Test>> getAllTest(){
 		Iterable<Test> rl = serv.getAllTest();	
 		return new ResponseEntity<Iterable<Test>>(rl, HttpStatus.OK);
 	}
-	@RequestMapping(value = "/getOneTest/{i}")
+	@RequestMapping(value = "/get-one-test/{i}")
 	public ResponseEntity<Test> getOneTest(@PathVariable("i") Long id){
 		return new ResponseEntity<Test>(serv.getOneTest(id),HttpStatus.OK);
 	}	
-	@RequestMapping(value = "/getOneGender/{i}")
+	@RequestMapping(value = "/get-one-gender/{i}")
 	public ResponseEntity<Gender> getOneGender(@PathVariable("i") Long id){
 		return new ResponseEntity<Gender>(serv.getOneGender(id),HttpStatus.OK);
 	}
