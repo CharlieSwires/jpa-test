@@ -45,4 +45,10 @@ public class Controller {
 		return new ResponseEntity<Test>(serv.save(test),HttpStatus.OK);
 		
 	}
+	
+	@RequestMapping(value = "/post-gender")
+	public ResponseEntity<Gender> postGender(@RequestBody Gender test){
+		return new ResponseEntity<Gender>(serv.save(test),HttpStatus.OK);
+		
+	}
 }

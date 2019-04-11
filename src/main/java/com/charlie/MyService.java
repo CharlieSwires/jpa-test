@@ -70,4 +70,7 @@ public class MyService {
 	public Test save(Test test) {
 		return repository.save(test);
 	}
+	public Gender save(Gender test) {
+		return genderRepository.save(test);
+	}
 }
