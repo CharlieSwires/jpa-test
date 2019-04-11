@@ -1,6 +1,7 @@
 package com.charlie;
 
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -28,7 +29,7 @@ public class MyService {
 		List<Result> results = new ArrayList<Result>();
 		for(Object[] item: res) {
 			Result r = new Result();
-			r.setId((int)item[0]);
+			r.setId(((BigInteger)item[0]).intValue());
 			r.setName((String)item[1]);
 			r.setGender((String)item[2]);
 			results.add(r);
@@ -63,5 +64,10 @@ public class MyService {
 			return genderOptional.get();
 		};
 		return null;
+	}
+
+
+	public Test save(Test test) {
+		return repository.save(test);
 	}
 }
