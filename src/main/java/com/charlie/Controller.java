@@ -17,7 +17,7 @@ public class Controller {
 	@Autowired
 	private MyService serv;
 	//@PreAuthorize("hasRole('IT_DEVELOPER')")
-	@RequestMapping(value = "/gelAll", method=RequestMethod.GET)
+	@RequestMapping(value = "/getAll", method=RequestMethod.GET)
 	public ResponseEntity<Results> get(){
 		Results rl = serv.run();	
 		return new ResponseEntity<Results>(rl, HttpStatus.OK);
