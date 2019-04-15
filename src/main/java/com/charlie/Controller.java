@@ -68,13 +68,13 @@ public class Controller {
 	}
 	
 	@RequestMapping(value = "/delete-test/{id}", method=RequestMethod.DELETE)
-	public ResponseEntity<Boolean> deleteTest(@PathVariable("id") Long id, @RequestBody Test test){
+	public ResponseEntity<Boolean> deleteTest(@PathVariable("id") Long id){
 		return new ResponseEntity<Boolean>(serv.deleteTest(id),HttpStatus.OK);
 		
 	}
 	
 	@RequestMapping(value = "/delete-gender/{id}", method=RequestMethod.DELETE)
-	public ResponseEntity<Boolean> deleteGender(@PathVariable("id") Long id, @RequestBody Gender test){
+	public ResponseEntity<Boolean> deleteGender(@PathVariable("id") Long id){
 		return new ResponseEntity<Boolean>(serv.deleteGender(id),HttpStatus.OK);
 		
 	}
