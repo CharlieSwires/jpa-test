@@ -1,9 +1,9 @@
 C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\ExampleMain.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\GenderRepository.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\MyService.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\Result.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\Results.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\Controller.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\Test.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\Gender.java
-C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\TestRepository.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\beans\Result.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\beans\Test.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\services\MyService.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\controllers\Controller.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\repositories\TestRepository.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\beans\Results.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\beans\Gender.java
+C:\Users\charles.swires\Workspaces\MyEclipse 2017\jpa-test\src\main\java\com\charlie\repositories\GenderRepository.java

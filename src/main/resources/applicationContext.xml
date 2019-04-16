@@ -8,26 +8,22 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
     
     <bean id="MyService"
-        class="com.charlie.MyService" />
+        class="com.charlie.services.MyService" />
     <bean id="Controller"
-        class="com.charlie.Controller" />
+        class="com.charlie.controllers.Controller" />
    <bean id="ExampleMain"
         class="com.charlie.ExampleMain" />
     <bean id="Test"
-        class="com.charlie.Test" />
+        class="com.charlie.beans.Test" />
      <bean id="Result"
-        class="com.charlie.Result" />
+        class="com.charlie.beans.Result" />
      <bean id="Results"
-        class="com.charlie.Results" />
+        class="com.charlie.beans.Results" />
     <bean id="Gender"
-        class="com.charlie.Gender" />
+        class="com.charlie.beans.Gender" />
     <bean id="TestRepository"
-        class="com.charlie.TestRepository" />
+        class="com.charlie.repositories.TestRepository" />
     <bean id="GenderRepository"
-        class="com.charlie.GenderRepository" />
-     <bean id="Result"
-        class="com.charlie.Result" />
-     <bean id="Results"
-        class="com.charlie.Results" />
+        class="com.charlie.repositories.GenderRepository" />
 
 </beans>

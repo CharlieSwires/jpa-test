@@ -1,4 +1,4 @@
-package com.charlie;
+package com.charlie.services;
 
 
 import java.math.BigInteger;
@@ -11,10 +11,17 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Service;
 
+import com.charlie.beans.Gender;
+import com.charlie.beans.Result;
+import com.charlie.beans.Results;
+import com.charlie.beans.Test;
+import com.charlie.repositories.GenderRepository;
+import com.charlie.repositories.TestRepository;
+
 
 @Service
 @ComponentScan(basePackages = {"com.charlie"})
-@EnableJpaRepositories(basePackages = "com.charlie")
+@EnableJpaRepositories(basePackages = "com.charlie.repositories")
 public class MyService {
 
 

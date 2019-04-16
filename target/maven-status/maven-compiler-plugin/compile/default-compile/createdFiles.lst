@@ -1,9 +1,9 @@
 com\charlie\ExampleMain.class
-com\charlie\Test.class
-com\charlie\Controller.class
-com\charlie\TestRepository.class
-com\charlie\Results.class
-com\charlie\MyService.class
-com\charlie\Result.class
-com\charlie\Gender.class
-com\charlie\GenderRepository.class
+com\charlie\controllers\Controller.class
+com\charlie\beans\Gender.class
+com\charlie\beans\Test.class
+com\charlie\repositories\TestRepository.class
+com\charlie\services\MyService.class
+com\charlie\repositories\GenderRepository.class
+com\charlie\beans\Results.class
+com\charlie\beans\Result.class

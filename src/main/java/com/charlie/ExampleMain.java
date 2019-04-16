@@ -5,7 +5,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "com.charlie")
+@EnableJpaRepositories(basePackages = "com.charlie.repositories")
 public class ExampleMain extends SpringBootServletInitializer{
 //	static final Logger logger = LoggerFactory.getLogger(ExampleMain.class);
 //	static ConfigurableApplicationContext context = null;
