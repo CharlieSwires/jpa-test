@@ -2,7 +2,7 @@ README
 ======
 
 create table test(id bigint primary key auto_increment, name varchar(255), sex bigint);
-create table test(id bigint primary key auto_increment, gender varchar(255));
+create table gender(id bigint primary key auto_increment, gender varchar(255));
 
 H2 database ~/charles.swires/test
 
