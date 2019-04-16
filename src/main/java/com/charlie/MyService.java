@@ -83,13 +83,15 @@ public class MyService {
 
 
 	public boolean deleteTest(Long id) {
-		repository.deleteById(id);
+		try{repository.deleteById(id);}
+		catch(Exception e){return false;}
 		return true;
 	}
 
 
 	public boolean deleteGender(Long id) {
-		genderRepository.deleteById(id);
+		try{genderRepository.deleteById(id);}
+		catch(Exception e){return false;}
 		return true;
 	}
 }
