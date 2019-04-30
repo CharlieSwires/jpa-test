@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.charlie.beans.Dummy;
 import com.charlie.beans.Gender;
 import com.charlie.beans.Results;
 import com.charlie.beans.Test;
@@ -44,6 +45,25 @@ public class Controller {
 	@RequestMapping(value = "/getOneGender/{i}", method=RequestMethod.GET)
 	public ResponseEntity<Gender> getOneGender(@PathVariable("i") Long id){
 		return new ResponseEntity<Gender>(serv.getOneGender(id),HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/getOneGender/{one}/{two}/{three}/{four}/{five}/{six}", method=RequestMethod.GET)
+	public ResponseEntity<Dummy> getSomething(
+			@PathVariable("one") String one,
+			@PathVariable("two") String two,
+			@PathVariable("three") String three,
+			@PathVariable("four") String four,
+			@PathVariable("five") String five,
+			@PathVariable("six") String six
+			){
+		String name = (one != null && !one.equals("") && !one.equals("null"))? one : null;
+		String description = (two != null && !two.equals("") && !two.equals("null"))? two : null;
+		Integer actionId = (three != null && !three.equals("") && !three.equals("null"))? new Integer(three) : null;
+		Integer appId = (four != null && !four.equals("") && !four.equals("null"))? new Integer(four) : null;
+		Integer featureId = (five != null && !five.equals("") && !five.equals("null"))? new Integer(five) : null;
+		Integer moduleId = (six != null && !six.equals("") && !six.equals("null"))? new Integer(six) : null;
+		Dummy d = new Dummy(name,description,actionId,appId,featureId,moduleId);
+		return new ResponseEntity<Dummy>(d,HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/postTest", method=RequestMethod.POST)
