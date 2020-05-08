@@ -2,6 +2,7 @@ com\charlie\ExampleMain.class
 com\charlie\controllers\Controller.class
 com\charlie\beans\Gender.class
 com\charlie\beans\Test.class
+com\charlie\beans\Dummy.class
 com\charlie\repositories\TestRepository.class
 com\charlie\services\MyService.class
 com\charlie\repositories\GenderRepository.class
